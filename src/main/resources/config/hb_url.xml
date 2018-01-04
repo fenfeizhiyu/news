@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<news-config>
+    <news>
+        <tag-name>湖北</tag-name>
+        <file-pref>湖北要闻</file-pref>
+        <source>中新网</source>
+        <url>http://www.hb.chinanews.com/hbxw.html</url>
+        <save_text>hb_hbyw</save_text>
+    </news>
+
+    <news>
+    <tag-name>湖北</tag-name>
+    <file-pref>荆楚各地</file-pref>
+    <source>中新网</source>
+    <url>http://www.hb.chinanews.com/dsxw.html</url>
+        <save_text>hb_jcgd</save_text>
+    </news>
+
+    <news>
+        <tag-name>湖北</tag-name>
+        <file-pref>经济新闻</file-pref>
+        <source>中新网</source>
+        <url>http://www.hb.chinanews.com/cjxw.html</url>
+        <save_text>hb_jjxw</save_text>
+    </news>
+
+<news>
+    <tag-name>湖北</tag-name>
+    <file-pref>社会与法</file-pref>
+    <source>中新网</source>
+    <url>http://www.hb.chinanews.com/cjxw.html</url>
+    <save_text>hb_shyf</save_text>
+</news>
+
+
+    <news>
+    <tag-name>湖北</tag-name>
+    <file-pref>外报湖北</file-pref>
+    <source>中新网</source>
+    <url>http://www.hb.chinanews.com/wbhb.html</url>
+        <save_text>hb_wbhb</save_text>
+</news>
+
+    <news>
+        <tag-name>湖北</tag-name>
+        <file-pref>灵秀湖北</file-pref>
+        <source>中新网</source>
+        <url>http://www.hb.chinanews.com/travel.html</url>
+        <save_text>hb_lxhb</save_text>
+    </news>
+
+
+
+
+</news-config>
