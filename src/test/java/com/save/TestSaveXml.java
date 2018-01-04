@@ -1,5 +1,8 @@
 package com.save;
 
+import com.util.Utils;
+import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.filefilter.FileFilterUtils;
 import org.dom4j.Document;
 import org.dom4j.io.OutputFormat;
 import org.dom4j.io.XMLWriter;
@@ -9,10 +12,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.StringWriter;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 /**
  * @author yu.yang
@@ -23,6 +23,13 @@ public class TestSaveXml {
     private static String FILE_BATH = TestSaveXml.class.getClassLoader().getResource("").getPath();
 
 
+
+    @Test
+    public void testSearchFile(){
+        String path = FILE_BATH;
+        List<File> fiels=( List<File>)FileUtils.listFiles(new File(path), FileFilterUtils.suffixFileFilter("xml"),  FileFilterUtils.trueFileFilter());
+        System.out.println();
+    }
 
 
     @Test

@@ -13,25 +13,10 @@ import java.util.List;
 /**
  * @author yu.yang
  */
-public class XmlConfigParser {
-
-    public static void main(String[] args){
-        /*
-        try {
-            String s=FileUtils.readFileToString(new File("./src/main//resources/hb_url.xml"),"utf-8");
-            XPathParser xPathParser = new XPathParser(s);
-           XNode xNode= xPathParser.evalNode("/news-config");
-           List<XNode> nodes=xNode.getChildren();
-            System.out.println(nodes.size());
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }*/
-
-    }
+public class XmlConfigParser extends XmlFileParser{
 
 
-    private static final String BASE_PATH = "./src/main//resources";
+    private static final String BASE_PATH = "./src/main/resources";
     private static final String[] URL_PATHS=new String[]{"/config/hb_url.xml"};
     private static List<NewSource> sourceList;
 
@@ -39,11 +24,16 @@ public class XmlConfigParser {
         return sourceList;
     }
 
+
+
     public  void parseConfig(){
         try {
             sourceList = new ArrayList<NewSource>();
-            for(String str:URL_PATHS){
-                String s=FileUtils.readFileToString(new File(BASE_PATH+str),"utf-8");
+            List<String> xmls=getXmlFiles(BASE_PATH+"/config");
+            if (CheckUtil.isEmpty(xmls)) {
+                return;
+            }
+            for(String s:xmls){
                 XPathParser xPathParser = new XPathParser(s);
                 XNode xNode= xPathParser.evalNode("/news-config");
                 List<XNode> nodes=xNode.getChildren();
